@@ -1,0 +1,269 @@
+body {
+  font-family: cursive;
+  margin: 0;
+}
+
+.title-text {
+  font-size: 7vh;
+  text-shadow: 1px 18px 3px #aa62c0;
+  color: darkmagenta;
+}
+
+h1 {
+  font-size: 7vh;
+  margin-top: 0;
+}
+
+.home,
+.contact,
+.menu {
+  flex-grow: 1;
+  flex-basis: 0;
+  text-align: center;
+  font-size: 4vh;
+  color: darkmagenta;
+}
+
+.home {
+  background-color: blanchedalmond;
+}
+.contact {
+  background-color: #ffcdf5;
+}
+.menu {
+  background-color: #cdffe1;
+}
+
+.home-bg {
+  background-color: blanchedalmond;
+}
+.contact-bg {
+  background-color: #ffcdf5;
+}
+.menu-bg {
+  background-color: #cdffe1;
+}
+
+.home:hover {
+  filter: brightness(90%);
+}
+.contact:hover {
+  filter: brightness(90%);
+}
+.menu:hover {
+  filter: brightness(90%);
+}
+
+.selected {
+  border-top: solid black;
+  border-left: solid black;
+  border-right: solid black;
+  border-radius: 100px 6px 0px 0px;
+  z-index: 10;
+}
+
+.selected:hover {
+  filter: none;
+}
+
+.content-page {
+  text-align: center;
+}
+
+.navText {
+  margin: 0;
+}
+.tabs {
+  position: absolute;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin: auto;
+  z-index: 9;
+  position: relative;
+  top: -50px;
+}
+
+.bg-image {
+  background-size: contain;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  display: inline;
+}
+
+.title {
+  position: absolute;
+}
+
+.image-container .title {
+  position: absolute;
+  z-index: 999;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 40%; /* Adjust this value to move the positioned div up and down */
+  text-align: right;
+  width: 90%; /* Set the width of the positioned div */
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+}
+
+.main-image {
+  width: 100%;
+  backdrop-filter: contrast(0.7);
+}
+
+.page-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  border: solid;
+  justify-content: center;
+  min-height: 500px;
+  position: relative;
+  top: -50px;
+  -moz-border-radius-topleft: 30px;
+  -moz-border-radius-topright: 0px;
+  -moz-border-radius-bottomright: 30px;
+  -moz-border-radius-bottomleft: 30px;
+  -webkit-border-radius: 30px 0px 30px 30px;
+  border-radius: 30px 30px 30px 30px;
+  padding: 30px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.about-me {
+  line-height: 0.5;
+  text-align: center;
+}
+
+/* Menu */
+.card-container {
+  border: solid;
+  width: 90%;
+  height: auto;
+  margin: auto;
+  padding: 15px;
+  text-align: center;
+  background-image: url("https://amymhaddad.s3.amazonaws.com/morocco-blue.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.menu-item-title {
+  border: solid;
+  filter: drop-shadow(5px 5px 5px white);
+  font-size: 4vh;
+}
+
+.menu-item-title:after {
+  position: absolute;
+  content: "";
+  height: 3px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 30%;
+  background: rgb(224, 62, 62);
+  animation-name: rock;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  filter: blur(3px);
+  transform: translate(0px, 40px);
+}
+
+@keyframes rock {
+  0,
+  100% {
+    left: -50px;
+    transform: translate(-50px, 40px);
+  }
+
+  50% {
+    left: 50px;
+    transform: translate(0px, 40px);
+  }
+}
+
+.menu-item-description {
+  visibility: hidden;
+  width: 80%;
+  transition: bottom 0.5s ease;
+  bottom: 0%;
+  overflow: hidden;
+  border: solid;
+  position: absolute;
+  z-index: 3;
+  padding: 20px 20px;
+  box-sizing: border-box;
+  text-shadow: white 0px 0px 10px;
+  font-family: monospace;
+  font-size: large;
+  background-color: grey;
+}
+
+.img-container:hover > .menu-item-description {
+  visibility: visible;
+  bottom: 10%;
+}
+
+.img-container {
+  width: 80%;
+  margin: auto;
+  border: solid;
+  height: 250px;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.menu-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    width: 100%;
+    border-radius: 0;
+  }
+  .home,
+  .menu,
+  .contact {
+    background-color: grey;
+    border-radius: 0%;
+    border: none;
+  }
+  .selected:after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 30%;
+    background: rgb(224, 62, 62);
+    transition: bottom 0.5s ease;
+    filter: blur(3px);
+    transform: translate(0px, -20px);
+  }
+}
