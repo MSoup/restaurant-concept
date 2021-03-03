@@ -28,13 +28,10 @@ function displayMenu() {
   // make heading then display cards
   const content = document.querySelector(".content-page");
 
-  let heading = document.createElement("h1");
-  let heading2 = document.createElement("h2");
-  heading.textContent = "Welcome to MajesticSoup's Kitchen";
-  heading2.textContent = "Menu";
+  let heading = document.createElement("h2");
+  heading.textContent = "Menu";
 
   content.appendChild(heading);
-  content.appendChild(heading2);
 
   generateCard(
     "Pizza",

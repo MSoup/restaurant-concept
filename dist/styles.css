@@ -67,7 +67,7 @@ h1 {
 }
 
 .content-page {
-  text-align: center;
+  white-space: pre-wrap;
 }
 
 .navText {

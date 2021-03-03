@@ -1,5 +1,6 @@
 import { displayHome } from "./home-about";
 import { displayMenu } from "./menu.js";
+import { displayContact } from "./contact";
 
 function getNav() {
   let nav = document.createElement("nav");
