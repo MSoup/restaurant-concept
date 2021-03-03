@@ -1,7 +1,6 @@
 import { getHeader } from "./hero-header";
 import { getNav } from "./nav";
 import { displayHome } from "./home-about";
-import { displayContact } from "./contact";
 
 const container = document.createElement("div");
 const contentDiv = document.createElement("div");
