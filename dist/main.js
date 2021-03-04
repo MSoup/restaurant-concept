@@ -20,6 +20,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/footer.js":
+/*!***********************!*\
+  !*** ./src/footer.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"genFooter\": () => (/* binding */ genFooter)\n/* harmony export */ });\nfunction genFooter() {\r\n  const container = document.querySelector(\"#content\");\r\n  const footer = document.createElement(\"div\");\r\n  const divider = document.createElement(\"div\");\r\n  const footerText = document.createElement(\"p\");\r\n\r\n  footer.className = \"footer\";\r\n  divider.className = \"divider\";\r\n  footerText.textContent = \"All rights reserved\";\r\n\r\n  footer.appendChild(footerText);\r\n  container.appendChild(divider);\r\n\r\n  container.appendChild(footer);\r\n}\r\n\r\n\r\n\n\n//# sourceURL=webpack://restaurant/./src/footer.js?");
+
+/***/ }),
+
 /***/ "./src/hero-header.js":
 /*!****************************!*\
   !*** ./src/hero-header.js ***!
@@ -46,7 +56,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hero_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hero-header */ \"./src/hero-header.js\");\n/* harmony import */ var _nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./nav */ \"./src/nav.js\");\n/* harmony import */ var _home_about__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./home-about */ \"./src/home-about.js\");\n\r\n\r\n\r\n\r\nconst container = document.createElement(\"div\");\r\nconst contentDiv = document.createElement(\"div\");\r\n\r\nfunction loadContainer() {\r\n  // home-bg selected by default\r\n  container.className = \"page-container home-bg\";\r\n  contentDiv.className = \"content-page\";\r\n  container.appendChild(contentDiv);\r\n  return container;\r\n}\r\n\r\nconst content = document.querySelector(\"#content\");\r\ncontent.appendChild((0,_hero_header__WEBPACK_IMPORTED_MODULE_0__.getHeader)());\r\ncontent.appendChild((0,_nav__WEBPACK_IMPORTED_MODULE_1__.getNav)());\r\ncontent.appendChild(loadContainer());\r\n(0,_home_about__WEBPACK_IMPORTED_MODULE_2__.displayHome)();\r\n// select home by default\r\ndocument.querySelector(\".home\").classList.add(\"selected\");\r\n\n\n//# sourceURL=webpack://restaurant/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hero_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hero-header */ \"./src/hero-header.js\");\n/* harmony import */ var _nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./nav */ \"./src/nav.js\");\n/* harmony import */ var _home_about__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./home-about */ \"./src/home-about.js\");\n/* harmony import */ var _footer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./footer.js */ \"./src/footer.js\");\n\r\n\r\n\r\n\r\n\r\nconst container = document.createElement(\"div\");\r\nconst contentDiv = document.createElement(\"div\");\r\n\r\nfunction loadContainer() {\r\n  // home-bg selected by default\r\n  container.className = \"page-container home-bg\";\r\n  contentDiv.className = \"content-page\";\r\n  container.appendChild(contentDiv);\r\n  return container;\r\n}\r\n\r\nconst content = document.querySelector(\"#content\");\r\ncontent.appendChild((0,_hero_header__WEBPACK_IMPORTED_MODULE_0__.getHeader)());\r\ncontent.appendChild((0,_nav__WEBPACK_IMPORTED_MODULE_1__.getNav)());\r\ncontent.appendChild(loadContainer());\r\n(0,_footer_js__WEBPACK_IMPORTED_MODULE_3__.genFooter)();\r\n(0,_home_about__WEBPACK_IMPORTED_MODULE_2__.displayHome)();\r\n// select home by default\r\ndocument.querySelector(\".home\").classList.add(\"selected\");\r\n\n\n//# sourceURL=webpack://restaurant/./src/index.js?");
 
 /***/ }),
 
